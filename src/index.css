@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+:root {
+  --brand-coral: #f17c63;
+  --brand-coral-dark: #ef634f;
+  --brand-peach: #eda391;
+  --brand-tan: #edc79e;
+  --brand-teal: #3d8f7c;
+  --brand-bg: #FBF1E7;
+  --brand-bg-warm: #F6E3CF;
+  --brand-text: #1f2937;
+  --brand-text-secondary: #374151;
+}
+
+body {
+  font-family: "Sora", sans-serif;
+  background-color: var(--brand-bg);
+  color: var(--brand-text);
+  margin: 0;
+}
