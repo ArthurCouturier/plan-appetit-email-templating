@@ -6,14 +6,16 @@ import {
   Font,
   Preview,
 } from "@react-email/components";
+import { CONFETTI_HEAD_CSS } from "./EmailHeader";
 
 interface EmailLayoutProps {
   preview?: string;
   campaign?: string;
+  confetti?: boolean;
   children: React.ReactNode;
 }
 
-export default function EmailLayout({ preview, children }: EmailLayoutProps) {
+export default function EmailLayout({ preview, confetti = false, children }: EmailLayoutProps) {
   return (
     <Html lang="fr">
       <Head>
@@ -37,6 +39,9 @@ export default function EmailLayout({ preview, children }: EmailLayoutProps) {
           fontWeight={700}
           fontStyle="normal"
         />
+        {confetti && (
+          <style dangerouslySetInnerHTML={{ __html: CONFETTI_HEAD_CSS }} />
+        )}
       </Head>
       {preview && <Preview>{preview}</Preview>}
       <Body style={bodyStyle}>

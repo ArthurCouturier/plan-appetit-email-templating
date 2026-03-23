@@ -51,6 +51,6 @@ const styles = {
   },
   link: {
     color: "#f17c63",
-    textDecoration: "underline",
+    textDecoration: "underline" as const,
   },
 };

@@ -15,6 +15,7 @@ export default function WelcomeEmail() {
     <EmailLayout
       campaign={CAMPAIGN}
       preview="Bienvenue sur Plan'Appétit ! Tu as 3 crédits gratuits pour générer tes premières recettes."
+      confetti
     >
       <EmailHeader campaign={CAMPAIGN} title="Bienvenue !" confetti />
       <EmailBody>

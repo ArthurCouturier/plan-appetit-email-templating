@@ -15,6 +15,7 @@ export default function CreditsPurchasedEmail() {
     <EmailLayout
       campaign={CAMPAIGN}
       preview="Tes crédits ont été ajoutés ! Génère tes prochaines recettes dès maintenant."
+      confetti
     >
       <EmailHeader campaign={CAMPAIGN} title="Crédits ajoutés !" confetti />
       <EmailBody>

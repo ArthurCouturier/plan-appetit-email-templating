@@ -15,6 +15,7 @@ export default function SubscriptionConfirmedEmail() {
     <EmailLayout
       campaign={CAMPAIGN}
       preview="Ton abonnement Premium est activé ! Recettes illimitées, c'est parti."
+      confetti
     >
       <EmailHeader campaign={CAMPAIGN} title="Bienvenue chez les Premium !" confetti />
       <EmailBody>
