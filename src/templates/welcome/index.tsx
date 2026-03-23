@@ -6,41 +6,40 @@ import EmailBody, {
   EmailHeading,
 } from "../../components/email/EmailBody";
 import EmailButton from "../../components/email/EmailButton";
+import EmailHighlightBox from "../../components/email/EmailHighlightBox";
 
 const CAMPAIGN = "welcome";
 
 export default function WelcomeEmail() {
   return (
-    <EmailLayout campaign={CAMPAIGN} preview="Bienvenue sur Plan'Appétit ! Découvrez la cuisine assistée par IA.">
-      <EmailHeader campaign={CAMPAIGN} title="Bienvenue sur Plan'Appétit !" />
+    <EmailLayout
+      campaign={CAMPAIGN}
+      preview="Bienvenue sur Plan'Appétit ! Tu as 3 crédits gratuits pour générer tes premières recettes."
+    >
+      <EmailHeader campaign={CAMPAIGN} title="Bienvenue !" confetti />
       <EmailBody>
-        <EmailHeading>Bonjour 👋</EmailHeading>
+        <EmailHeading>Ta cuisine, boostée par l'IA</EmailHeading>
         <EmailText>
-          Merci de nous rejoindre ! Plan'Appétit utilise l'intelligence
-          artificielle pour vous aider à créer des recettes personnalisées,
-          adaptées à vos goûts, votre budget et vos ingrédients disponibles.
+          Tu viens de rejoindre Plan'Appétit et on est ravis de t'accueillir !
         </EmailText>
         <EmailText>
-          Pour commencer, explorez nos différents modes de génération de
-          recettes :
+          Dis-nous ce que tu as dans ton frigo, ton budget, tes envies et en
+          quelques secondes, on te génère une recette sur mesure.
         </EmailText>
-        <EmailText style={{ paddingLeft: "16px", borderLeft: "3px solid #edc79e" }}>
-          🍳 <strong>Mode Frigo</strong> — Dites-nous ce que vous avez, on
-          s'occupe du reste
-          <br />
-          📍 <strong>Mode Localisation</strong> — Des recettes inspirées de
-          votre région
-          <br />
-          💰 <strong>Mode Budget</strong> — Cuisinez malin sans compromis
-        </EmailText>
-        <div style={{ textAlign: "center", margin: "24px 0" }}>
+
+        <EmailHighlightBox variant="success">
+          <strong>3 crédits offerts</strong> t'attendent sur ton compte.
+          Chaque crédit = une recette générée par l'IA, rien que pour toi.
+        </EmailHighlightBox>
+
+        <div style={{ textAlign: "center", margin: "28px 0" }}>
           <EmailButton campaign={CAMPAIGN} href="https://plan-appetit.fr">
-            Découvrir Plan'Appétit
+            Génère ta première recette
           </EmailButton>
         </div>
+
         <EmailText style={{ fontSize: "13px", color: "#9ca3af" }}>
-          Si vous avez des questions, répondez directement à cet email. Nous
-          sommes toujours ravis d'échanger avec vous !
+          Une question ? Réponds directement à cet email, on lit tout.
         </EmailText>
       </EmailBody>
       <EmailFooter campaign={CAMPAIGN} />
